@@ -19,13 +19,29 @@ ssh pi@mainsail.local
 ```
 This will prompt one to enter your password.
 ```
-pi@mainsail.local:~ $ cd printer_data/config
+`#00c000`pi@mainsail.local:`#0000c0`~ $ `#ffffff`cd printer_data/config
 ```
 Changes your current directory to the config directory of one's printer
 ```
-pi@mainsail.local:~ $ git clone https://github.com/NHoeller/Klipper.git
+`#00c000`pi@mainsail.local:`#0000c0`~/printer_data/config $ `#ffffff`git clone https://github.com/NHoeller/Klipper-extension.git
 ```
-This clones the github repository to one's into the printer's config folder
+This clones the github repository to one's into the printer's config folder.
+
+##### Changing moonraker configuration
+If one wants to update this compilation within klipper the moonraker.conf needs to be changed.
+To do this head to the section MACHINE in the web GUI.
+move to the section CONFIG FILES and choose the CONFIG section.
+Now one should find the moonraker.conf, click to edit.
+The following code should be added at the bottom of this file
+```
+[update_manager Klipper-extension]
+type: git_repo
+origin: https://github.com/NHoeller/Klipper-extension.git
+path: ~/printer_data/config/Klipper-extension
+primary_branch: main
+is_system_service: False
+managed_services: klipper
+```
 
 #### Future features
 It is planned to summit some minor and major changes to Klipper, Mainsail, Fluidd and Octoprint.

@@ -1,20 +1,23 @@
 # Klipper
 
 ### Introduction
+#### - [ ] Step one
 I made this repository, because i wanted to create a universal configuration system for Klipper that i can use for my current and future printers. In the first step i am going to create a folder structure with main options like
-[ ] folder structure
-[ ] neopixel
-[ ] resonance-tester
-[ ] door-lock-controls
-[ ] temperature-controls
-[ ] mini-display (if 2nd dispplay is implemented in klipper)
-[ ] start-pause-resume-end macros
-[ ] bed-leveling-controls
+- [ ] folder structure
+- [ ] neopixel
+- [ ] resonance-tester
+- [ ] door-lock-controls
+- [ ] temperature-controls
+- [ ] mini-display (if 2nd dispplay is implemented in klipper)
+- [ ] start-pause-resume-end macros
+- [ ] bed-leveling-controls
 These features will be placed in several seperat files and one or more master files.
 To do changes one needs only to access the master files.
 
+#### - [ ] Step two
 In the next step i will try to make suggestions to the Klipper-, Mainsail-, Fluidd- and Octoprint-community to bring some minor and major upgrades so a configuration with dependencies and/or a variable-based configuration can be implemented in klipper.
 
+#### - [ ] Step three
 In the last step i will try to suggest additional functions, so one can do almost every change in the configuration guided by a webUI integrated in the mainsail-, fluidd- and octoprint webGUI.
 
 For further details follow this repository and check this README.md

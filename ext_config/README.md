@@ -19,11 +19,11 @@ ssh pi@mainsail.local
 ```
 This will prompt one to enter your password.
 ```
-`#00c000`pi@mainsail.local:`#0000c0`~ $ `#ffffff`cd printer_data/config
+pi@mainsail.local:~ $ cd printer_data/config
 ```
 Changes your current directory to the config directory of one's printer
 ```
-`#00c000`pi@mainsail.local:`#0000c0`~/printer_data/config $ `#ffffff`git clone https://github.com/NHoeller/Klipper-extension.git
+pi@mainsail.local:~/printer_data/config $ git clone https://github.com/NHoeller/Klipper-extension.git
 ```
 This clones the github repository to one's into the printer's config folder.
 

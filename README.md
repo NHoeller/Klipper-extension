@@ -42,7 +42,8 @@ this script will check all requirements and then copy some files, create some sy
 ##### available options for the installer script:
 - [-u] add this repository to moonraker update manager
 - [-w] will start an installation wizzard (future feature)
-- [-k (alternative klipper path)] will set an alternativ e klipper directory
+- [-k (alternative klipper path)] will set an alternative klipper directory
+
 
 ### Klipper, Mainsail, Fluidd and Octoprint
 This repository contains configurations and macro files that can be integrated into a klipper environment for 3d printing
@@ -62,5 +63,5 @@ see https://docs.fluidd.xyz or https://github.com/OctoPrint/OctoPrint for more d
 
 
 ### License and documentation
-This repository is published under [GNU public license](https://github.com/NHoeller/Klipper-extension/LICENSE.md).
-The complete Documentation will be published in this repository inside the [README section](https://github.com/NHoeller/Klipper-extension/README/DOCUMENTAION.md)
+This repository is published under [GNU public license](https://github.com/NHoeller/Klippext/LICENSE.md).
+The complete Documentation will be published in this repository inside the [README section](https://github.com/NHoeller/Klippext/README/DOCUMENTAION.md)

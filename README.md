@@ -30,6 +30,7 @@ ssh pi@mainsail.local
 ```
 this will prompt one to enter your password.
 
+```
 pi@mainsail.local:~ $ git clone https://github.com/NHoeller/klippext.git
 ```
 This clones the github repository to one's into the printer's 'home' folder.

@@ -166,3 +166,5 @@ if [ "${WIZZARD}" == 1 ]; then
     install_wizzard
 fi
 restart_klipper
+
+## eof

@@ -1,3 +1,4 @@
+# Klippext update_manager entry
 [update_manager klippext]
 type: git_repo
 path: ~/klippext

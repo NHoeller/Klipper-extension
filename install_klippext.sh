@@ -128,10 +128,10 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 # run scripts
 startup
 install_ext
-if [[ UPDATER == "1" ]] then 
+if [ UPDATER == "1" ]; then 
     update_manager
 fi
-if [[ WIZZARD == "1" ]] then
+if [  WIZZARD == "1" ]; then
     install_wizzard
 fi
 restart_klipper

@@ -97,7 +97,7 @@ echo "Klippext installation started"
 echo "options:"
 
 # check for options
-while :getopts 'uwk:' OPTION; do
+while getopts 'uwk:' OPTION; do
   case "$OPTION" in
     u)
       echo "adding update manager to moonraker.conf"
@@ -123,7 +123,7 @@ done
 shift "$(($OPTIND -1))"
 
 # find SRCDIR from the pathname of this script
-SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/src/ && pwd )"
+SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 
 # run scripts
 startup

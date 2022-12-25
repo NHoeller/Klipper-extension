@@ -47,7 +47,7 @@ update_manager()
         echo -e "\n" >> ${HOME}/klipper_config/moonraker.conf
         while read -r line; do
             echo -e "${line}" >> ${HOME}/klipper_config/moonraker.conf
-            done < "$PWD/moonraker_update.txt"
+            done < "${HOME}/klippext/moonraker_update.txt"
         echo -e "\n" >> ${HOME}/klipper_config/moonraker.conf
         else
         echo -e "[update_manager klippext] already exist in moonraker.conf [SKIPPED]"
@@ -93,7 +93,7 @@ install_ext()
 set -e
 
 # output some text
-echo "Klipper-extensions installation started"
+echo "Klippext installation started"
 echo "options:"
 
 # check for options

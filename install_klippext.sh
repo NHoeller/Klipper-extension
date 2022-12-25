@@ -129,11 +129,11 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 # run scripts
 startup
 install_ext
-if [ ${UPDATER} == 1 ]; then
+if [ "${UPDATER}" == 1 ]; then
     echo "..."
     update_manager
 fi
-if [ $WIZZARD == 1 ]; then
+if [ "${WIZZARD}" == "1" ]; then
     echo "..."
     install_wizzard
 fi

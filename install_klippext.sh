@@ -30,7 +30,7 @@ startup()
 restart_klipper()
 {
     echo "Restarting Klipper..."
-    sudo systemctl restart klipper
+#    sudo systemctl restart klipper
 }
 
 #
@@ -102,7 +102,7 @@ while getopts 'uwk:' OPTION; do
   case "$OPTION" in
     u)
       echo "adding update manager to moonraker.conf"
-#      UPDATER="1"
+      UPDATER="1"
       ;;
     w)
       echo "use install wizard (future feature)"

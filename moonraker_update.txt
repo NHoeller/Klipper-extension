@@ -2,4 +2,5 @@
 type: git_repo
 path: ~/klippext
 origin: https://github.com/NHoeller/klippext.git
+primary_branch: main
 is_system_service: False

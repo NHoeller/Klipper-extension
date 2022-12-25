@@ -7,6 +7,8 @@
 #### This File is distributed under GPLv3
 ####
 
+.PHONY: install updater wizzard
+
 all: help
 
 help:
@@ -25,12 +27,12 @@ help:
 	@echo ""
 
 install:
-	@bash -c 'install_klippext.sh'
+	@bash -c './install_klippext.sh'
 
 updater:
-	@bash -c 'install_klippext.sh -u'
+	@bash -c './install_klippext.sh -u'
 
 wizzard:
-	@bash -c 'install_klippext.sh -w'
+	@bash -c './install_klippext.sh -w'
 
 #uninstall

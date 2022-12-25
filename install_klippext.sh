@@ -59,21 +59,52 @@ update_manager()
 #
 install_wizzard()
 {
-#    echo "future feature - not available yet"
-    items=(1 "Item 1"
-       2 "Item 2")
+HEIGHT=15
+WIDTH=40
+CHOICE_HEIGHT=4
+BACKTITLE="Backtitle here"
+TITLE="Title here"
+MENU="Choose one of the following options:"
 
-while choice=$(dialog --title "$TITLE" \
-                 --menu "Please select" 10 40 3 "${items[@]}" \
-                 2>&1 >/dev/tty)
-    do
-    case $choice in
-        1) ;; # some action on 1
-        2) ;; # some action on 2
-        *) ;; # some action on other
-    esac
-done
-clear # clear after user pressed Cancel
+OPTIONS=(1 "Option 1"
+         2 "Option 2"
+         3 "Option 3")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+        1)
+            echo "You chose Option 1"
+            ;;
+        2)
+            echo "You chose Option 2"
+            ;;
+        3)
+            echo "You chose Option 3"
+            ;;
+esac
+
+#    echo "future feature - not available yet"
+#    items=(1 "Item 1"
+#       2 "Item 2")
+#
+#while choice=$(dialog --title "$TITLE" \
+#                 --menu "Please select" 10 40 3 "${items[@]}")
+#    do
+#    case $choice in
+#        1) ;; # some action on 1
+#        2) ;; # some action on 2
+#        *) ;; # some action on other
+#    esac
+#done
+#clear # clear after user pressed Cancel
 }
 
 #
@@ -105,7 +136,7 @@ while getopts 'uwk:' OPTION; do
       ;;
     w)
       echo "use install wizard (future feature)"
-      WIZARD=1
+      WIZZARD=1
       ;;
     k)
       echo "use alternative klipper path"
@@ -128,9 +159,9 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 # run scripts
 startup
 install_ext
-if [ "${UPDATER}" == 1 ]; then
+#if [ "${UPDATER}" == 1 ]; then
 #    update_manager
-fi
+#fi
 if [ "${WIZZARD}" == 1 ]; then
     install_wizzard
 fi

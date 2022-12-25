@@ -36,8 +36,14 @@ pi@mainsail.local:~ $ git clone https://github.com/NHoeller/klippext.git
 This clones the github repository to one's into the printer's 'home' folder.
 
 ```
-pi@mainsail.local:~ $ install_klippext.sh
+pi@mainsail.local:~ $ cd klippext
+pi@mainsail.local:~/klippext $ install_klippext.sh
 ```
+or
+```
+pi@mainsail.local:~ $ klippext/install_klippext.sh
+```
+
 this script will check all requirements and then copy some files, create some symlinks and do some other stuff
 ##### available options for the installer script:
 - [-u] add this repository to moonraker update manager

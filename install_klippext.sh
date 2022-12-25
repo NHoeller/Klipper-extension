@@ -1,8 +1,8 @@
 #!/bin/bash
 KLIPPER_PATH="${HOME}/klipper"
 SYSTEMDDIR="/etc/systemd/system"
-UPDATER="0"
-WIZZARD="0"
+UPDATER=0
+WIZZARD=0
 
 #
 # check startup
@@ -102,11 +102,11 @@ while getopts 'uwk:' OPTION; do
   case "$OPTION" in
     u)
       echo "adding update manager to moonraker.conf"
-      UPDATER="1"
+      UPDATER=1
       ;;
     w)
       echo "use install wizard (future feature)"
-      WIZARD="1"
+      WIZARD=1
       ;;
     k)
       echo "use alternative klipper path"
@@ -129,11 +129,11 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 # run scripts
 startup
 install_ext
-if [[ UPDATER == "1" ]]; then
+if [ UPDATER == 1 ]; then
     echo "..."
     update_manager
 fi
-if [[ WIZZARD == "1" ]]; then
+if [ WIZZARD == 1 ]; then
     echo "..."
     install_wizzard
 fi

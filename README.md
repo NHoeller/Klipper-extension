@@ -1,4 +1,4 @@
-# Klipper
+# Klipper Extension (Klippext)
 
 ### Introduction
 I made this repository, because i wanted to create a universal configuration system for Klipper that i can use for my current and future printers. In the first step i am going to create a folder structure with main options like
@@ -19,6 +19,30 @@ In the last step i will try to suggest additional functions, so one can do almos
 
 For further details follow this repository and check this README.md
 
+
+### Installation
+For making the installation and configuration as simple as possible i decided to create an installer shell script, so one
+only needs to follow the instructions below.
+
+connect to your Raspberry Pi, CB1 module, CM4 module or other device running klipper via ssh
+```
+ssh pi@mainsail.local
+```
+this will prompt one to enter your password.
+
+pi@mainsail.local:~ $ git clone https://github.com/NHoeller/klippext.git
+```
+This clones the github repository to one's into the printer's 'home' folder.
+
+```
+pi@mainsail.local:~ $ install_klippext.sh
+```
+this script will check all requirements and then copy some files, create some symlinks and do some other stuff
+##### available options for the installer script:
+- [-u] add this repository to moonraker update manager
+- [-w] will start an installation wizzard (future feature)
+- [-k (alternative klipper path)] will set an alternativ e klipper directory
+
 ### Klipper, Mainsail, Fluidd and Octoprint
 This repository contains configurations and macro files that can be integrated into a klipper environment for 3d printing
 using the mainsail, fluidd or octoprint webGUI.
@@ -34,6 +58,7 @@ see https://docs.fluidd.xyz or https://github.com/fluidd-core/fluidd for more de
 
 #### Octoprint
 see https://docs.fluidd.xyz or https://github.com/OctoPrint/OctoPrint for more details
+
 
 ### License and documentation
 This repository is published under [GNU public license](https://github.com/NHoeller/Klipper-extension/LICENSE.md).

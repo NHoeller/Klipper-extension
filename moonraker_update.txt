@@ -1,0 +1,5 @@
+[update_manager klippext]
+type: git_repo
+path: ~/klippext
+origin: https://github.com/NHoeller/klipperext.git
+is_system_service: False

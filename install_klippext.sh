@@ -40,6 +40,7 @@ restart_klipper()
 update_manager()
 {
     echo -e "Adding update manager to moonraker.conf"
+    echo -e "${HOME}/klippext/moonraker_update.txt to ${HOME}/klipper_config/moonraker.conf"
 
     update_section=$(grep -c '\[update_manager klippext\]' \
     ${HOME}/klipper_config/moonraker.conf || true)
